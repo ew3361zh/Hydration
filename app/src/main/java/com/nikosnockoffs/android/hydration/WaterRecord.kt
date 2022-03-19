@@ -11,7 +11,7 @@ import androidx.room.PrimaryKey
 data class WaterRecord(
     @PrimaryKey
     @NonNull
-    var day: String,
+    val day: String,
     @NonNull
-    val glasses: Int
+    var glasses: Int
     )
