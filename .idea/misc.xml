@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/water_rating_bar.xml" value="0.1785" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.284375" />
+        <entry key="app/src/main/res/layout/fragment_hydration.xml" value="0.284375" />
       </map>
     </option>
   </component>

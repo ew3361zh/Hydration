@@ -8,10 +8,26 @@ import androidx.room.PrimaryKey
 // Room will be able to use this to create a db table and datatypes
 // Changed to data class because comes with too-string method
 @Entity
-data class WaterRecord(
+class WaterRecord(
     @PrimaryKey
     @NonNull
     val day: String,
-    @NonNull
-    var glasses: Int
-    )
+    glasses: Int
+    ) {
+
+    companion object {
+        const val MAX_GLASSES = 5
+    }
+
+    var glasses: Int = glasses
+    set(value) {
+        if (value < 0 || value > MAX_GLASSES) {
+            throw IllegalArgumentException("Glasses must be between 0 and $MAX_GLASSES")
+        }
+        field = value
+    }
+
+    override fun toString(): String {
+        return "Day=$day, Glasses=$glasses"
+    }
+}

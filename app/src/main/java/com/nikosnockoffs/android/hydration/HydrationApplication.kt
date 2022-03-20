@@ -7,6 +7,7 @@ class HydrationApplication: Application() {
     private val database by lazy { WaterDatabase.getDatabase(this) }
 
     // activity can access this repository
-    val repository by lazy { WaterRepository(database.waterDao())}
+    val waterRepository by lazy { WaterRepository(database.waterDao())}
+    val daysRepository = DaysRepository()
 
 }
